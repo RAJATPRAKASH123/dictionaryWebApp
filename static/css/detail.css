@@ -32,10 +32,13 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
+	/* background: white; */
 	background: #313a3d;
 	width: 100%;
 	padding: 18px 0;
 	font-size: 1.45em;
+	/* color */
+	color: white;
 	letter-spacing: 0.075em;
 	-webkit-transition: all 333ms ease-in-out;
 	-moz-transition: all 333ms ease-in-out;
