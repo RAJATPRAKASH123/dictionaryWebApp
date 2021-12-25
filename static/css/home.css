@@ -9,7 +9,7 @@
   }
   .our_solution_category .solution_cards_box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
   }
   .solution_cards_box .solution_card {
