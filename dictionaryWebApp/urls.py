@@ -21,6 +21,6 @@ from lang_lang.views import home_view, language_detail_view, language_api_detail
 urlpatterns = [
     path('languages/<int:id>/', language_detail_view),
     path('api/languages/<int:id>/', language_api_detail_view),
-    path('home/', home_view),
+    path('', home_view),
     path('admin/', admin.site.urls),
 ]
