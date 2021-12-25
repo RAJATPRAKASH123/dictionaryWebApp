@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-8pbi3)rrd0=wq+ykz$r33e5h_q9^i3tfus$#r0l=ocpu%vcy7b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # 
 
+# updated while putting it on django
 ALLOWED_HOSTS = ["*"]
 
 
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # whitenoise middleware added
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
@@ -81,7 +83,7 @@ WSGI_APPLICATION = 'dictionaryWebApp.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
+# https://console.clever-cloud.com/users/me/addons/addon_b383dd81-9fe7-4712-baa2-fa79f7a07226/ migrations 
 DATABASES = {
     'default':
     {
@@ -137,6 +139,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# staticfiles is used
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# added whitenoise and installation of whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
