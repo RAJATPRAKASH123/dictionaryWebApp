@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h1 style="text-align:center">Dictionary World</h1>
+<h1 style="text-align:center">Choose Languages to translate </h1>
+
+{% for object in object_list %}
+    <div>
+        <a href="/languages/{{object.id}}/"> <h2 style="text-align:center"> {{ object.lang1 }} to {{ object.lang2 }}</h2></a>
+    </div>
+{% endfor %}
+
+{% endblock %}

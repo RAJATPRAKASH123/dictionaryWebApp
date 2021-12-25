@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Translations
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align:center"> Let's translate from {{ object.lang1 }} to {{ object.lang2 }}</h1>
+
+<form style="text-align:center" method = 'GET' action="."> {% csrf_token %}
+    <input type = 'text' name = 'word' />
+    <!-- {{form.as_p}} -->
+    <button type='submit'> Search Word </button>
+</form>
+
+{% if cur_res %}
+    <h2 style="text-align:center"> Word Found!</h2>
+    <h2 style="text-align:center"> {{cur_res.0}} is a {{ cur_res.1 }}</h2>
+    <h2 style="text-align:center"> It means {{ cur_res.2 }}</h2>
+
+{% endif %}
+
+<h1 style="text-align:center"> Some examples are : </h1>
+{% for word in word_list|slice:"10" %}
+    <div>
+        <h2 style="text-align:center"> {{ word.0 }} : {{word.1}} : {{word.2}}</h2>
+    </div>
+{% endfor %}
+
+{% endblock %}
