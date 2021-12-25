@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
 Translations
 {% endblock %}
@@ -8,16 +8,36 @@ Translations
 
 <div class="jumbotron text-center">
     <h1>Dictionary World</h1>
-    <p>An Endless ocean of your thoughts and words!</p> 
+    <p>{{ object.lang1 }} to {{ object.lang2 }}</p>
 </div>
 
-<h1 style="text-align:center"> Let's translate from {{ object.lang1 }} to {{ object.lang2 }}</h1>
+<!-- <h1 style="text-align:center"> Let's translate from {{ object.lang1 }} to {{ object.lang2 }}</h1> -->
 
-<form style="text-align:center" method = 'GET' action="."> {% csrf_token %}
-    <input type = 'text' name = 'word' />
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+
+<script src = "{% static 'js/detail.js' %}" type = "text/javascript"/> </script>
+
+<section id="hire">
+    <h3>Search Word</h3>
+    
+    <form method = 'GET' action="." {% csrf_token %}>
+	      <div class="field name-box">
+		        <input type="text" id="name" name="word" placeholder="What's The Word?"/>
+        		<label for="name">Word</label>
+		        <span class="ss-icon">check</span>
+	      </div>
+	      <input class="button" type="submit" value="Translate" />
+    </form>
+</section>
+
+<!-- <form style="text-align:center" method = 'GET' action="."> {% csrf_token %} -->
+    <!-- <input type = 'text' name = 'word' /> -->
     <!-- {{form.as_p}} -->
-    <button type='submit'> Search Word </button>
-</form>
+    <!-- <button type='submit'> Search Word </button> -->
+<!-- </form> -->
+
+
+
 
 {% if cur_res %}
     <h2 style="text-align:center"> Word Found!</h2>
