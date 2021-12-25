@@ -4,9 +4,13 @@
 Translations
 {% endblock %}
 
-
-
 {% block content %}
+
+<div class="jumbotron text-center">
+    <h1>Dictionary World</h1>
+    <p>An Endless ocean of your thoughts and words!</p> 
+</div>
+
 <h1 style="text-align:center"> Let's translate from {{ object.lang1 }} to {{ object.lang2 }}</h1>
 
 <form style="text-align:center" method = 'GET' action="."> {% csrf_token %}
