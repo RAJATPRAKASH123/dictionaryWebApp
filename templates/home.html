@@ -6,10 +6,7 @@
 <!-- <h1 style="text-align:center"></h1>
 <h1 style="text-align:center">Choose Languages to translate </h1> -->
 
-<div class="jumbotron text-center">
-    <h1>Dictionary World</h1>
-    <p>An Endless ocean of your thoughts and words!</p> 
-</div>
+
 
 
 {% if object_list %}
@@ -23,7 +20,6 @@
 
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
             <!-- Card -->
-            <div class="bg-image card shadow-1-strong">
               <div class="p-3 mb-2 bg-dark bg-gradient text-white">
                   <div class="card-body text-white" >
                     {{ object.lang1 }} to {{ object.lang2 }}
@@ -35,7 +31,6 @@
                   </div>
               </div>
             <!-- Card -->
-            </div>
         </div>
 
     {% endfor %}
