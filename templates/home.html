@@ -13,11 +13,36 @@
 
 
 {% if object_list %}
-{% for object in object_list %}
-    <div>
-        <a href="/languages/{{object.id}}/"> <h2 style="text-align:center"> {{ object.lang1 }} to {{ object.lang2 }}</h2></a>
+
+<div class="container my-5">
+    <div class="row">
+    {% for object in object_list %}
+        <!-- <div >
+            <a href="/languages/{{object.id}}/"> <h2 style="text-align:center"> {{ object.lang1 }} to {{ object.lang2 }}</h2></a>
+        </div> -->
+
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <!-- Card -->
+            <div class="bg-image card shadow-1-strong" style="
+                        background-image: url('https://mdbootstrap.com/img/new/slides/003.jpg');
+                        ">
+              <div class="card-body text-white">
+                <h3 class="card-title">{{ object.lang1 }} to {{ object.lang2 }}</h3>
+                <!-- <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p> -->
+                <a href="/languages/{{object.id}}/" class="btn btn-outline-light">Button</a>
+              </div>
+            </div>
+            <!-- Card -->
+        </div>
+
+    {% endfor %}
     </div>
-{% endfor %}
+</div>
+
+
 {% endif %}
 
 {% endblock %}
