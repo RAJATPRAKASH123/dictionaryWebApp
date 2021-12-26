@@ -46,7 +46,7 @@ def language_detail_view(request, id):
     path = str(Path(__file__).resolve().parent.parent) + "/templates/"
     print(path)
     with open(path + "data/" + obj.lang1 + obj.lang2 +".csv") as csvfile:
-        reader = csv.reader(csvfile, delimiter=',')
+        reader = csv.reader(csvfile, skipinitialspace = True, quotechar = '"')
         for row in reader:
             if row:
                 words.append(row)

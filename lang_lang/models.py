@@ -1,6 +1,7 @@
 from django.db import models
 
-# Create your models here.
+# Create your models here. 
+# automatic to table
 class LanguageLanguage(models.Model): # Our LanguageLanguage class is inheriting models.Model 
     # word ( in lang1 ) : meaning ( in lang2)
     # lang1 : is of type String
